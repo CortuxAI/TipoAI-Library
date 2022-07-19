@@ -21,7 +21,7 @@ The ```Tipo.Functional``` supports many activation and cost functions to use the
 from Tipo.Functional import activation, loss
 
 # Get the activated output from the network
-output = activation.relu(network)
+output = activation.relu.forward(network)
 
 # Define the loss function and use it to compare the output with the label
 criterion = loss.MeanSquareError()
