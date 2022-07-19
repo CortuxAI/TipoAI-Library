@@ -20,11 +20,12 @@ The ```Tipo.Functional``` supports many activation and cost functions to use the
 # Imports the Functional modules
 from Tipo.Functional import activation, loss
 
-# Outputs the activation of a certain neuron
-scores = activation.relu(neuron)
+# Get the activated output from the network
+output = activation.relu(network)
 
-# Compares the score with the actual answer
-loss = loss.meanSquareError(scores, answer)
+# Define the loss function and use it to compare the output with the label
+criterion = loss.MeanSquareError()
+score = criterion(output, labels)
 ```
 
 Using these basic methods togheter with the Node module, we get all the necessarry tools for an neural network.
